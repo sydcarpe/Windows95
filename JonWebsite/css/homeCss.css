@@ -1,0 +1,105 @@
+:root {
+    --background: whitesmoke;
+}
+
+
+body {
+    background-color: var(--background);
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.pageContainer{
+    padding: 3.0em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.nameSpace{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    height: 450px;
+    width:500px;
+    justify-items:center;
+    justify-self: center;
+}
+
+.nameBackground{
+    background: url(../images/noteCard.png) no-repeat;
+    background-size: 500px;
+    align-self: center;
+    justify-self: center;
+    
+}
+
+    .nameBackground h1 {
+        justify-self:center;
+        text-align: center;
+        font-family: 'Shadows Into Light', cursive;
+        font-size: 80px;
+        padding-top: .75em;
+    }
+
+    .nameBackground h5 {
+        justify-self: center;
+        text-align: center;
+        font-family: 'Shadows Into Light', cursive;
+        font-size: 20px;
+        margin:0;
+        padding: 0 2.0em;
+    }
+
+h1 {
+    font-size: 50px;
+    margin: 0;
+}
+
+.openImg{
+    width: 375px;
+}
+
+img{
+    width: 475px;
+    margin: -25px 0px 0px ;
+}
+
+.aboutJon{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    max-width: 900px;
+    text-align:center;
+}
+
+    .aboutJon h3 {
+        /*idk*/
+    }
+
+.djContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 900px;
+    text-align: center;
+}
+
+.sectionHeader {
+    margin: 1.5em;
+}
+
+.djContainer img {
+    height: 200px;
+    width: 350px;
+}

@@ -1,0 +1,1274 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Sydney Carpenter</title>
+
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/navbarCss.css" />
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script>
+        /* When the user clicks on the button,
+        toggle between hiding and showing the dropdown content */
+        function dropDown() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+
+
+        function showProjects() {
+            var work = document.getElementById("workScreen");
+            if (work.style.display === "none") {
+                work.style.display = "block";
+            } else {
+                work.style.display = "none";
+            }
+        }
+
+        function showBlog() {
+            var work = document.getElementById("blogContainer");
+            if (work.style.display === "none") {
+                work.style.display = "block";
+            } else {
+                work.style.display = "none";
+            }
+        }
+
+        function showIcelandBlog() {
+            var work = document.getElementById("icelandNotePad");
+            if (work.style.display === "none") {
+                work.style.display = "block";
+            } else {
+                work.style.display = "none";
+            }
+        }
+
+        function covidResearch() {
+            var work = document.getElementById("covidFolder");
+            if (work.style.display === "none") {
+                work.style.display = "block";
+            } else {
+                work.style.display = "none";
+            }
+        }
+
+        function travelifyOpen() {
+            var work = document.getElementById("travelifyFolder");
+            if (work.style.display === "none") {
+                work.style.display = "block";
+            } else {
+                work.style.display = "none";
+            }
+        }
+
+        function openTravelifyBlog() {
+            var work = document.getElementById("travelifyBlog");
+            if (work.style.display === "none") {
+                work.style.display = "block";
+            } else {
+                work.style.display = "none";
+            }
+        }
+
+        //show planner blog
+        function showPlannerBlog() {
+            var work = document.getElementById("plannerNotePad");
+            if (work.style.display === "none") {
+                work.style.display = "block";
+            } else {
+                work.style.display = "none";
+            }
+        }
+
+        //show contact information
+        function showContact() {
+            var work = document.getElementById("contactContainer");
+            if (work.style.display === "none") {
+                work.style.display = "block";
+            } else {
+                work.style.display = "none";
+            }
+        }
+
+        //show jons site info
+        function showJonsFolder() {
+            var work = document.getElementById("jonFolder");
+            if (work.style.display === "none") {
+                work.style.display = "block";
+            } else {
+                work.style.display = "none";
+            }
+        }
+
+        function toLinkedIn() {
+            window.open ("https://www.linkedin.com/in/sydney-carpenter-24656a225/");
+        }
+
+        function toPlanner() {
+            var work = document.getElementById("plannerFolder");
+            if (work.style.display === "none") {
+                work.style.display = "block";
+            } else {
+                work.style.display = "none";
+            }
+        }
+
+        function toJons() {
+            window.location.href = "work/jonsSite.html";
+        }
+
+        //download resume onclick
+        function downloadResume() {
+            download("extra/Resume.pdf", "SydneyCarpenterResume");
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+    <!--NAV CONTAINER/ BAR on side-->
+    <div class="navContainer">
+        <div class="iconDisplay">
+            <a href="index.html"><img src="images/pinkcomputer.png" /></a>
+            <p>Home</p>
+        </div>
+
+        <div class="iconDisplay">
+            <a onclick="showProjects()"><img src="images/pinkopenfolder.png" /> </a>
+            <p>Work</p>
+        </div>
+
+        <div class="iconDisplay">
+            <a onclick="showBlog()"><img src="images/pinkjournal.png" /></a>
+            <p>Blog</p>
+        </div>
+
+        <div class="iconDisplay">
+            <a onclick="showContact() "><img src="images/pinkphone.png" /></a>
+            <p>Contact <br />Me</p>
+        </div>
+    </div>
+
+
+    <!--CD Player info-->
+    <div class="cdPlayer" id="mydiv">
+        <div class="cdHeader">
+            <img src="images/cdIcon.png" /><h3>CD Player</h3>
+            <div class="microsoftButton">
+                <button>x</button>
+            </div>
+        </div>
+
+        <div class="totalcdBody">
+            <div class="cdBody">
+                <img src="images/sweaters.jpg" />
+                <div class="trackInfo">
+
+                    <div class="cdRowInfo">
+                        <p class="cdTitle">Artist: </p> <div class="infoContainer"> <h4 class="titleCard"> Jon Krus</h4> <button class="dropbtn" onclick="dropDown()"> &#x21e9; </button> </div>
+                        <div id="myDropdown" class="dropdown-content">
+                            <!--
+                                <a href="JonWebsite/index.html">Jon's Website</a>
+                            <hr />-->
+                            <a target="_blank" href="https://thebravestlittletoaster.bandcamp.com/">Jon's Bandcamp</a>
+                        </div>
+                    </div>
+
+                    <div class="cdRowInfo">
+                        <p class="cdTitle">Track: </p> <div class="infoContainer"> <h4 class="titleCard"> Sweaters</h4> <!--<button> &#x21e9; </button>--> </div>
+                    </div>
+                </div>
+
+            </div>
+            <!--Audio portion
+            Seek slider to do later
+            https://css-tricks.com/lets-create-a-custom-audio-player/
+                <span id="current-time" class="time">0:00</span>
+                <input type="range" id="seek-slider" max="100" value="0">
+                <span id="duration" class="time">0:00</span>
+
+                        -->
+
+            <br />
+            <audio id="player" src="extra/sweaters.mp3"></audio>
+            <div class="mediaButtons">
+                <button onclick="document.getElementById('player').currentTime -= 1.0;"> <img style="height: 25px; transform: rotate(180deg); " src="images/arrow.png" /> </button>
+                <button onclick="document.getElementById('player').currentTime += 1.0;"> <img style="height: 25px; " src="images/arrow.png" /> </button>
+                <button onclick="document.getElementById('player').play()"> <span style="font-size: 25px;" class="material-icons"> play_arrow </span></button>
+                <button onclick="document.getElementById('player').pause()"><span style="font-size: 20px;" class="material-icons"> rectangle </span></button>
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <!--My Projects/work container-->
+    <div id="workScreen" style="display:none;">
+        <div class="workBody">
+            <div class="cdHeader">
+                <img src="images/pinkopenfolder.png" /> <h3>Work</h3>
+                <div class="microsoftButton">
+                    <button href="work.html"> <div class="fullScreenPic"></div> </button>
+                    <button onclick="showProjects()">x</button>
+                </div>
+            </div>
+
+            <div class="subHeader">
+                <p>File</p> <p>Edit</p> <p>View</p> <p>Tools</p>
+
+                <div class="locationBar">
+                    <p style="text-decoration:none;">/home/sydney/myWork/</p>
+                </div>
+            </div>
+
+            <div class="workTotalbody">
+
+                <!--Side bar-->
+                <div class="workNavBar">
+                    <h5>Personal</h5>
+
+                    <div class="minifolder">
+                        <img onclick="showJonsFolder()" src="images/pinkfolder.png" /> <p>Jon's Website</p>
+                    </div>
+
+                    <!--
+                    <div class="minifolder">
+                        <img onclick="toPlanner()" src="images/folder.png" /> <p>Planner</p>
+                    </div>-->
+
+                    <h5>Professional</h5>
+                    <div class="minifolder">
+                        <img onclick="travelifyOpen()" src="images/pinkfolder.png" /> <p>Travelify</p>
+                    </div>
+
+                    <div class="minifolder">
+                        <img onclick="covidResearch()" src="images/pinkfolder.png" /> <p>COVID Research</p>
+                    </div>
+
+                </div>
+
+                <!--right side -->
+                <div class="workContainer">
+
+                    <div class="folder">
+                        <img onclick="showJonsFolder()" src="images/pinkfolder.png" />
+                        <p>Jon's Website</p>
+                    </div>
+
+                    <!--
+                    <div class="folder">
+                        <img onclick="toPlanner()" src="images/folder.png" />
+                        <p>Planner</p>
+                    </div>-->
+
+
+                    <div class="folder">
+                        <img onclick="travelifyOpen()" src="images/pinkfolder.png" />
+                        <p>Travelify</p>
+                    </div>
+
+                    <div class="folder">
+                        <img onclick="covidResearch()" src="images/pinkfolder.png" />
+                        <p> COVID Research</p>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <!--My blog container-->
+    <div id="blogContainer" style="display:none;">
+        <div class="workBody">
+            <div class="cdHeader">
+                <img src="images/pinkjournal.png" /> <h3>Blogs</h3>
+                <div class="microsoftButton">
+                    <button href="work.html"> <div class="fullScreenPic"></div> </button>
+                    <button onclick="showBlog() ">x</button>
+                </div>
+            </div>
+
+            <div class="subHeader">
+                <p>File</p> <p>Edit</p> <p>View</p> <p>Tools</p>
+
+                <div class="locationBar">
+                    <p style="text-decoration:none;">/home/sydney/myBlog/</p>
+                </div>
+            </div>
+
+            <div class="workTotalbody">
+
+                <!--Side bar-->
+                <div class="workNavBar">
+                    <h5>Personal</h5>
+
+                    <div class="minifolder" onclick="showIcelandBlog()">
+                        <img src="images/pinknotebook.png" /> <p>75 Days of Productivity</p>
+                    </div>
+
+                    <div class="minifolder">
+                        <img onclick="showPlannerBlog()" src="images/pinknotebook.png" /> <p>Planner Process</p>
+                    </div>
+                    <h5>Professional</h5>
+                    <div class="minifolder">
+                        <img onclick="openTravelifyBlog()" src="images/pinknotebook.png" /> <p>Travelify Process</p>
+                    </div>
+
+
+
+                </div>
+
+                <!--right side -->
+                <div class="workContainer">
+
+                    <div class="folder" onclick="showIcelandBlog()">
+                        <img src="images/pinknotebook.png" />
+                        <p>75 Days of Productivity</p>
+                    </div>
+
+                    <div class="folder">
+                        <img onclick="showPlannerBlog()" src="images/pinknotebook.png" />
+                        <p>Planner Process</p>
+                    </div>
+
+                    <div class="folder">
+                        <img onclick="openTravelifyBlog()" src="images/pinknotebook.png" />
+                        <p>Travelify Process</p>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <!--Contact Me form-->
+    <div id="contactContainer" style="display:none;">
+        <div class="workBody">
+            <div class="cdHeader">
+                <img src="images/pinkphone.png" /> <h3>Contact Me</h3>
+                <div class="microsoftButton">
+                    <button href="work.html"> <div class="fullScreenPic"></div> </button>
+                    <button onclick="showContact()">x</button>
+                </div>
+            </div>
+
+            <div class="subHeader">
+                <p>File</p> <p>Edit</p> <p>View</p> <p>Tools</p>
+
+                <div class="locationBar">
+                    <p style="text-decoration:none;">/home/sydney/contact_me/</p>
+                </div>
+            </div>
+
+            <div class="workTotalbody" id="innerFolder">
+
+                <!--Side bar-->
+                <div class="workNavBar">
+                    <h5>Email</h5>
+
+                    <div class="minifolder" onclick="openEmail()">
+                        <img src="images/pinkevel.png" /> <a href="mailto: ********@gmail.com">Email Me Here</a>
+                    </div>
+
+
+
+                    <h5>Professional</h5>
+                    <div class="minifolder">
+                        <img onclick="toLinkedIn()" target="_blank" src="images/notecard.png" /> <p>LinkedIn</p>
+                    </div>
+
+                    <div class="minifolder">
+                        <form method="get" action="extra/Resume.pdf">
+                            <img src="images/pinknotebook.png" /> <button download="Sydney Carpenter Resume">Résumé</button>
+                        </form>
+                    </div>
+
+
+                </div>
+
+                <!--right side -->
+                <div class="workContainer">
+
+                    <div class="folder" onclick="openEmail()">
+                        <img src="images/pinkevel.png" />
+                        <a href="mailto: *********@gmail.com">Email Me Here</a>
+                    </div>
+
+                    <div onclick="toLinkedIn()" class="folder">
+                        <img src="images/notecard.png" />
+                        <p>LinkedIn</p>
+                    </div>
+
+
+                    <div class="folder">
+                        <form onclick="downloadResume()" method="get" action="extra/Resume.pdf">
+                            <img src="images/pinknotebook.png" />
+                            <button download="Sydney Carpenter Resume">Résumé</button>
+                        </form>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+    <!--All the notepad/folder stuff-->
+    <!--75 Day Notepad information-->
+    <div id="icelandNotePad" style="display: none;">
+        <div class="notePadContainer">
+            <div class="notePadTitleBar">
+                <div class="npLeftSideTitle">
+                    <img src="images/pinknotebook.png" />
+                    <p>75 Days of Productivity - Notepad</p>
+                </div>
+
+                <div class="microsoftButton">
+                    <button href="work.html"> <div class="fullScreenPic"></div> </button>
+                    <button onclick="showIcelandBlog()">x</button>
+                </div>
+
+            </div>
+
+            <div class="notePadSubHeader">
+                <p>File</p> <p>Edit</p> <p>Search</p> <p>Help</p>
+
+            </div>
+            <div class="notePadContent">
+                <h4>75 Days of Productivity <!--- <a href="#75Day">View Full post</a>--></h4>
+
+                <h6>June, 2022</h6>
+                <p>
+                    This isn’t a known challenge, but more like a mix of two other challenges that you may, or may not have heard of. The first one is the 75 day challenge.
+                    Read about it <a target="_blank" href="https://www.crossrope.com/blogs/blog/75-hard-challenge/">here!</a> Short summary, drink one gallon of water, workout 90 minutes,
+                    follow a diet, no alcohol, read 10 pages of a non-fiction book,and take a progress picture each day!
+                    <br />  <br />
+                    The second one is one I actually found on <a target="_blank" href="https://www.tumblr.com/tagged/100%20days%20of%20productivity?sort=top">Tumblr</a>. This one is called 100 days of productivity. There isn’t too much to tell about this one besides each
+                    day do one productive thing! On Tumblr, most people like to do daily updates, which I will try to do here. I say try because I am graduating soon and don’t
+                    know how it will be for the next 75 days, but I will try my hardest!
+                    <br />  <br />
+                    What am I doing for 75 days? <!--Here are my basic goals for the next 75 days, starting April 25, 2022!--> <br />
+
+                    <ul>
+                        <li>Drink lots of water (gallon)</li>
+                        <li>Workout daily</li>
+                        <li>Meditation twice a day</li>
+                        <li>Skin care twice a day</li>
+                        <li>Reading/Journaling</li>
+                        <li>1 productive thing</li>
+                        <li>Make 1 collage of four pictures</li>
+                    </ul>
+                    <br />
+                    Come back soon to see my updates and progress!
+                    <!--
+                    To read all my goals and daily updates, <a href="#75day">view my full post here!</a>-->
+
+
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Jons Folder-->
+    <div id="jonFolder" style="display: none;">
+        <div class="notePadContainer">
+            <div class="notePadTitleBar">
+                <div class="npLeftSideTitle">
+                    <img src="images/pinknotebook.png" />
+                    <p>Jons Website - Notepad</p>
+                </div>
+
+                <div class="microsoftButton">
+                    <button href="work.html"> <div class="fullScreenPic"></div> </button>
+                    <button onclick="showJonsFolder()">x</button>
+                </div>
+
+            </div>
+
+            <div class="notePadSubHeader">
+                <p>File</p> <p>Edit</p> <p>Search</p> <p>Help</p>
+
+            </div>
+            <div class="notePadContent">
+                <h4>Jon's Website </h4>
+
+                <h6>March, 2022</h6>
+                <p>
+                    Jon is a DJ, singer/songwriter, great cook, and loves to watch movies. He also leaves great reviews, that I live and breathe by. See them on his
+                    <a target="_blank" href="https://letterboxd.com/jonkey/">Letterboxd</a>! The CD player is actually playing his music! Which you can also listen to on his
+                    <a target="_blank" href="https://thebravestlittletoaster.bandcamp.com/">Bandcamp</a>! I link both these here since I am not yet finished with his website. Hopefully soon I can have it up!
+                    Come back later for updates, or feel free to contact me with questions!
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!--Planner Process Notepad-->
+    <div id="plannerNotePad" style="display: none;">
+        <div class="notePadContainer">
+            <div class="notePadTitleBar">
+                <div class="npLeftSideTitle">
+                    <img src="images/pinknotebook.png" />
+                    <p>Planner Process - Notepad</p>
+                </div>
+
+                <div class="microsoftButton">
+                    <button href="work.html"> <div class="fullScreenPic"></div> </button>
+                    <button onclick="showPlannerBlog()">x</button>
+                </div>
+
+            </div>
+
+            <div class="notePadSubHeader">
+                <p>File</p> <p>Edit</p> <p>Search</p> <p>Help</p>
+
+            </div>
+            <div class="notePadContent">
+                <h4> Planner Process</h4>
+                <h6>June 2022</h6>
+                <p>
+                    My online planner is currently still in the works, but I am making great progress! Hopefully I will be able to have the entire thing finished by the end of the summer!
+                </p>
+                <p>Now what <em>is</em> my online planner? </p>
+                <p>
+                    I wanted a place where I can organize my life. The things I am most excited for in my project are...
+                    <ol>
+                        <li>Easily displaying daily, monthly and yearly tasks, goals, and chores</li>
+                        <li>Having an organized project page where I can see all my projects displayed, their tasks, due dates, and end goal.</li>
+                        <li>Having an organized meal prep, meal plan, and shopping list.</li>
+                    </ol>
+                    Since my partner, Jon, works as a DJ, I’d also like to add a DJ scheduler for him, so he can easily plan out his work days and I can also see what he is doing and make plans around them!
+                    <br /> <br />
+                    The hardest thing about this project so far is working by myself to make sure everything is cohesive and well planned out to make things easier for me while coding, but also while I am using the website.
+                    <br /> <br />
+                    My favorite part is designing and seeing my project come to life. It’s really neat to see my idea come to life and think about how great and organized I will be once I finish.
+                    <br /> <br />
+                    Basically, I want a planner, a planner that encapsulates all. Eventually, I’d like to be able to put my planner online for my friends and family, but for now, it's exclusively on my local computer. If you’d like to view my code, or see my progress, feel free to contact me and I would love to share my GitHub!
+
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--Planner Folder-->
+    <div id="plannerFolder" style="display:none;">
+        <div class="notePadContainer">
+            <div class="notePadTitleBar">
+                <div class="npLeftSideTitle">
+                    <img src="images/pinknotebook.png" />
+                    <p>Planner - Notepad</p>
+                </div>
+
+                <div class="microsoftButton">
+                    <button> <div class="fullScreenPic"></div> </button>
+                    <button onclick="toPlanner()">x</button>
+                </div>
+
+            </div>
+
+            <div class="notePadSubHeader">
+                <p>File</p> <p>Edit</p> <p>Search</p> <p>Help</p>
+
+            </div>
+            <div class="notePadContent">
+                <h4>Planner</h4>
+                <h6>Date</h6>
+                <p>
+                    Planner
+                </p>
+
+                <!--<a href="#">Go to Planner</a>-->
+                <br />
+                <button onclick="showPlannerBlog()">Read the Blog Post</button>
+
+
+            </div>
+        </div>
+    </div>
+
+    <!--COVID info folder-->
+    <div id="covidFolder" style="display:none;">
+        <div class="notePadContainer">
+            <div class="notePadTitleBar">
+                <div class="npLeftSideTitle">
+                    <img src="images/pinknotebook.png" />
+                    <p>Covid Research - Notepad</p>
+                </div>
+
+                <div class="microsoftButton">
+                    <button> <div class="fullScreenPic"></div> </button>
+                    <button onclick="covidResearch()">x</button>
+                </div>
+
+            </div>
+
+            <div class="notePadSubHeader">
+                <p>File</p> <p>Edit</p> <p>Search</p> <p>Help</p>
+
+            </div>
+            <div class="notePadContent">
+                <h4>COVID Research  </h4>
+                <h6>Spring 2021</h6>
+                <p>
+                    This research paper, written by Nick Russo, Chris Hudson, Zach Martakis, and me, is all about the rapid spread of covid misinformation!
+                    Nick even referenced our work in his thesis!
+                </p>
+
+                <form method="get" action="extra/covidMisinformation.pdf">
+                    <button download="Behavior-of-Disinformation-Relating-to-the-Covid-19-Vaccine">Download Paper</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Travelify info folder-->
+    <div id="travelifyFolder" style="display:none;">
+        <div class="notePadContainer">
+            <div class="notePadTitleBar">
+                <div class="npLeftSideTitle">
+                    <img src="images/pinknotebook.png" />
+                    <p>Travelify - Notepad</p>
+                </div>
+
+                <div class="microsoftButton">
+                    <button> <div class="fullScreenPic"></div> </button>
+                    <button onclick="travelifyOpen()">x</button>
+                </div>
+
+            </div>
+
+            <div class="notePadSubHeader">
+                <p>File</p> <p>Edit</p> <p>Search</p> <p>Help</p>
+
+            </div>
+            <div class="notePadContent">
+                <h4>Travelify</h4>
+                <h6>Fall 2021 - Spring 2022</h6>
+                <p>
+                    Travelify is a travel planning web application that was dreamed up by Manisha and brought to life by our team!
+                    Our key features that I created include: Login/logout, individual profile, group maintenance, trips, packing list, itinerary, and the calendar! What to learn more?
+                    Feel free to contact me!
+                </p>
+
+                <a target="_blank" href="https://cgi.luddy.indiana.edu/~team53/homePage.html">Go to Travelify</a>
+                <br />
+                <button onclick="openTravelifyBlog()">Read the Blog Post</button>
+
+            </div>
+        </div>
+    </div>
+
+    <!--Travelify Blog Post-->
+    <div id="travelifyBlog" style="display:none;">
+        <div class="notePadContainer">
+            <div class="notePadTitleBar">
+                <div class="npLeftSideTitle">
+                    <img src="images/pinknotebook.png" />
+                    <p>Travelify Blog - Notepad</p>
+                </div>
+
+                <div class="microsoftButton">
+                    <button> <div class="fullScreenPic"></div> </button>
+                    <button onclick="openTravelifyBlog()">x</button>
+                </div>
+
+            </div>
+
+            <div class="notePadSubHeader">
+                <p>File</p> <p>Edit</p> <p>Search</p> <p>Help</p>
+
+            </div>
+            <div class="notePadContent">
+                <h4>Travelify Blog</h4>
+                <h6>Fall 2021 - Spring 2022</h6>
+                <p>
+                    Travelify started in the fall semester of 2021, and it was finished in April, 2022. During that time, I developed my PHP and my SQL skills, and, dare I say, became quiet good at them both!
+                    The features I completed include
+                    <ul>
+                        <li>User Profile</li>
+                        <li>Google Login/Logout implementation</li>
+                        <li>Group Features</li>
+                        <li>View and Edit Trip</li>
+                        <li>Itinerary</li>
+                        <li>Packing List</li>
+                        <li>Calendar</li>
+                    </ul>
+
+                    While it was stressful at some times, it was a great experience and it taught me almost everything I know about PHP! It was so fun to make and further proved my love for creating and designing
+                    websites.
+                    </br>
+                    <!--<a href="#fullpost"> Read my full Post Here! </a>-->
+                </p>
+
+                <a target="_blank" href="https://cgi.luddy.indiana.edu/~team53/homePage.html">Go to Travelify</a>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <!--SCRIPTS BELOW-->
+    <!--------------------------------------------------------------------------------------------------------------------->
+    <!--music player script-->
+    <script>
+        //Make the DIV element draggagle:
+        dragElement(document.getElementById("mydiv"));
+
+        function dragElement(elmnt) {
+            var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+            if (document.getElementById(elmnt.id + "header")) {
+                /* if present, the header is where you move the DIV from:*/
+                document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+            } else {
+                /* otherwise, move the DIV from anywhere inside the DIV:*/
+                elmnt.onmousedown = dragMouseDown;
+            }
+
+            function dragMouseDown(e) {
+                e = e || window.event;
+                e.preventDefault();
+                // get the mouse cursor position at startup:
+                pos3 = e.clientX;
+                pos4 = e.clientY;
+                document.onmouseup = closeDragElement;
+                // call a function whenever the cursor moves:
+                document.onmousemove = elementDrag;
+            }
+
+            function elementDrag(e) {
+                e = e || window.event;
+                e.preventDefault();
+                // calculate the new cursor position:
+                pos1 = pos3 - e.clientX;
+                pos2 = pos4 - e.clientY;
+                pos3 = e.clientX;
+                pos4 = e.clientY;
+                // set the element's new position:
+                elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+                elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+            }
+
+            function closeDragElement() {
+                /* stop moving when mouse button is released:*/
+                document.onmouseup = null;
+                document.onmousemove = null;
+            }
+        }
+    </script>
+
+
+    <!--work container script-->
+    <script>
+        //Make the DIV element draggagle:
+        dragElement(document.getElementById("workScreen"));
+
+        function dragElement(elmnt) {
+            var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+            if (document.getElementById(elmnt.id + "header")) {
+                /* if present, the header is where you move the DIV from:*/
+                document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+            } else {
+                /* otherwise, move the DIV from anywhere inside the DIV:*/
+                elmnt.onmousedown = dragMouseDown;
+            }
+
+            function dragMouseDown(e) {
+                e = e || window.event;
+                e.preventDefault();
+                // get the mouse cursor position at startup:
+                pos3 = e.clientX;
+                pos4 = e.clientY;
+                document.onmouseup = closeDragElement;
+                // call a function whenever the cursor moves:
+                document.onmousemove = elementDrag;
+            }
+
+            function elementDrag(e) {
+                e = e || window.event;
+                e.preventDefault();
+                // calculate the new cursor position:
+                pos1 = pos3 - e.clientX;
+                pos2 = pos4 - e.clientY;
+                pos3 = e.clientX;
+                pos4 = e.clientY;
+                // set the element's new position:
+                elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+                elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+            }
+
+            function closeDragElement() {
+                /* stop moving when mouse button is released:*/
+                document.onmouseup = null;
+                document.onmousemove = null;
+            }
+        }
+    </script>
+
+    <!--notepad script-->
+    <script>
+        //Make the DIV element draggagle:
+        dragElement(document.getElementById("icelandNotePad"));
+
+        function dragElement(elmnt) {
+            var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+            if (document.getElementById(elmnt.id + "header")) {
+                /* if present, the header is where you move the DIV from:*/
+                document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+            } else {
+                /* otherwise, move the DIV from anywhere inside the DIV:*/
+                elmnt.onmousedown = dragMouseDown;
+            }
+
+            function dragMouseDown(e) {
+                e = e || window.event;
+                e.preventDefault();
+                // get the mouse cursor position at startup:
+                pos3 = e.clientX;
+                pos4 = e.clientY;
+                document.onmouseup = closeDragElement;
+                // call a function whenever the cursor moves:
+                document.onmousemove = elementDrag;
+            }
+
+            function elementDrag(e) {
+                e = e || window.event;
+                e.preventDefault();
+                // calculate the new cursor position:
+                pos1 = pos3 - e.clientX;
+                pos2 = pos4 - e.clientY;
+                pos3 = e.clientX;
+                pos4 = e.clientY;
+                // set the element's new position:
+                elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+                elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+            }
+
+            function closeDragElement() {
+                /* stop moving when mouse button is released:*/
+                document.onmouseup = null;
+                document.onmousemove = null;
+            }
+        }
+    </script>
+
+    <!--Planner notepad-->
+    <script>
+        //Make the DIV element draggagle:
+        dragElement(document.getElementById("plannerNotePad"));
+
+        function dragElement(elmnt) {
+            var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+            if (document.getElementById(elmnt.id + "header")) {
+                /* if present, the header is where you move the DIV from:*/
+                document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+            } else {
+                /* otherwise, move the DIV from anywhere inside the DIV:*/
+                elmnt.onmousedown = dragMouseDown;
+            }
+
+            function dragMouseDown(e) {
+                e = e || window.event;
+                e.preventDefault();
+                // get the mouse cursor position at startup:
+                pos3 = e.clientX;
+                pos4 = e.clientY;
+                document.onmouseup = closeDragElement;
+                // call a function whenever the cursor moves:
+                document.onmousemove = elementDrag;
+            }
+
+            function elementDrag(e) {
+                e = e || window.event;
+                e.preventDefault();
+                // calculate the new cursor position:
+                pos1 = pos3 - e.clientX;
+                pos2 = pos4 - e.clientY;
+                pos3 = e.clientX;
+                pos4 = e.clientY;
+                // set the element's new position:
+                elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+                elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+            }
+
+            function closeDragElement() {
+                /* stop moving when mouse button is released:*/
+                document.onmouseup = null;
+                document.onmousemove = null;
+            }
+        }
+    </script>
+
+    <!--covidFolder script-->
+    <script>
+        //Make the DIV element draggagle:
+        dragElement(document.getElementById("covidFolder"));
+
+        function dragElement(elmnt) {
+            var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+            if (document.getElementById(elmnt.id + "header")) {
+                /* if present, the header is where you move the DIV from:*/
+                document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+            } else {
+                /* otherwise, move the DIV from anywhere inside the DIV:*/
+                elmnt.onmousedown = dragMouseDown;
+            }
+
+            function dragMouseDown(e) {
+                e = e || window.event;
+                e.preventDefault();
+                // get the mouse cursor position at startup:
+                pos3 = e.clientX;
+                pos4 = e.clientY;
+                document.onmouseup = closeDragElement;
+                // call a function whenever the cursor moves:
+                document.onmousemove = elementDrag;
+            }
+
+            function elementDrag(e) {
+                e = e || window.event;
+                e.preventDefault();
+                // calculate the new cursor position:
+                pos1 = pos3 - e.clientX;
+                pos2 = pos4 - e.clientY;
+                pos3 = e.clientX;
+                pos4 = e.clientY;
+                // set the element's new position:
+                elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+                elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+            }
+
+            function closeDragElement() {
+                /* stop moving when mouse button is released:*/
+                document.onmouseup = null;
+                document.onmousemove = null;
+            }
+        }
+    </script>
+
+    <!--travelifyFolder script-->
+    <script>
+        //Make the DIV element draggagle:
+        dragElement(document.getElementById("travelifyFolder"));
+
+        function dragElement(elmnt) {
+            var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+            if (document.getElementById(elmnt.id + "header")) {
+                /* if present, the header is where you move the DIV from:*/
+                document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+            } else {
+                /* otherwise, move the DIV from anywhere inside the DIV:*/
+                elmnt.onmousedown = dragMouseDown;
+            }
+
+            function dragMouseDown(e) {
+                e = e || window.event;
+                e.preventDefault();
+                // get the mouse cursor position at startup:
+                pos3 = e.clientX;
+                pos4 = e.clientY;
+                document.onmouseup = closeDragElement;
+                // call a function whenever the cursor moves:
+                document.onmousemove = elementDrag;
+            }
+
+            function elementDrag(e) {
+                e = e || window.event;
+                e.preventDefault();
+                // calculate the new cursor position:
+                pos1 = pos3 - e.clientX;
+                pos2 = pos4 - e.clientY;
+                pos3 = e.clientX;
+                pos4 = e.clientY;
+                // set the element's new position:
+                elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+                elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+            }
+
+            function closeDragElement() {
+                /* stop moving when mouse button is released:*/
+                document.onmouseup = null;
+                document.onmousemove = null;
+            }
+        }
+    </script>
+
+    <!--travelifyBlog script-->
+    <script>
+        //Make the DIV element draggagle:
+        dragElement(document.getElementById("travelifyBlog"));
+
+        function dragElement(elmnt) {
+            var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+            if (document.getElementById(elmnt.id + "header")) {
+                /* if present, the header is where you move the DIV from:*/
+                document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+            } else {
+                /* otherwise, move the DIV from anywhere inside the DIV:*/
+                elmnt.onmousedown = dragMouseDown;
+            }
+
+            function dragMouseDown(e) {
+                e = e || window.event;
+                e.preventDefault();
+                // get the mouse cursor position at startup:
+                pos3 = e.clientX;
+                pos4 = e.clientY;
+                document.onmouseup = closeDragElement;
+                // call a function whenever the cursor moves:
+                document.onmousemove = elementDrag;
+            }
+
+            function elementDrag(e) {
+                e = e || window.event;
+                e.preventDefault();
+                // calculate the new cursor position:
+                pos1 = pos3 - e.clientX;
+                pos2 = pos4 - e.clientY;
+                pos3 = e.clientX;
+                pos4 = e.clientY;
+                // set the element's new position:
+                elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+                elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+            }
+
+            function closeDragElement() {
+                /* stop moving when mouse button is released:*/
+                document.onmouseup = null;
+                document.onmousemove = null;
+            }
+        }
+    </script>
+
+
+
+    <!--Blog container script-->
+    <script>
+        //Make the DIV element draggagle:
+        dragElement(document.getElementById("blogContainer"));
+
+        function dragElement(elmnt) {
+            var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+            if (document.getElementById(elmnt.id + "header")) {
+                /* if present, the header is where you move the DIV from:*/
+                document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+            } else {
+                /* otherwise, move the DIV from anywhere inside the DIV:*/
+                elmnt.onmousedown = dragMouseDown;
+            }
+
+            function dragMouseDown(e) {
+                e = e || window.event;
+                e.preventDefault();
+                // get the mouse cursor position at startup:
+                pos3 = e.clientX;
+                pos4 = e.clientY;
+                document.onmouseup = closeDragElement;
+                // call a function whenever the cursor moves:
+                document.onmousemove = elementDrag;
+            }
+
+            function elementDrag(e) {
+                e = e || window.event;
+                e.preventDefault();
+                // calculate the new cursor position:
+                pos1 = pos3 - e.clientX;
+                pos2 = pos4 - e.clientY;
+                pos3 = e.clientX;
+                pos4 = e.clientY;
+                // set the element's new position:
+                elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+                elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+            }
+
+            function closeDragElement() {
+                /* stop moving when mouse button is released:*/
+                document.onmouseup = null;
+                document.onmousemove = null;
+            }
+        }
+    </script>
+
+
+    <!--Planner folder script-->
+    <script>
+        //Make the DIV element draggagle:
+        dragElement(document.getElementById("plannerFolder"));
+
+        function dragElement(elmnt) {
+            var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+            if (document.getElementById(elmnt.id + "header")) {
+                /* if present, the header is where you move the DIV from:*/
+                document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+            } else {
+                /* otherwise, move the DIV from anywhere inside the DIV:*/
+                elmnt.onmousedown = dragMouseDown;
+            }
+
+            function dragMouseDown(e) {
+                e = e || window.event;
+                e.preventDefault();
+                // get the mouse cursor position at startup:
+                pos3 = e.clientX;
+                pos4 = e.clientY;
+                document.onmouseup = closeDragElement;
+                // call a function whenever the cursor moves:
+                document.onmousemove = elementDrag;
+            }
+
+            function elementDrag(e) {
+                e = e || window.event;
+                e.preventDefault();
+                // calculate the new cursor position:
+                pos1 = pos3 - e.clientX;
+                pos2 = pos4 - e.clientY;
+                pos3 = e.clientX;
+                pos4 = e.clientY;
+                // set the element's new position:
+                elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+                elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+            }
+
+            function closeDragElement() {
+                /* stop moving when mouse button is released:*/
+                document.onmouseup = null;
+                document.onmousemove = null;
+            }
+        }
+    </script>
+
+    <!--Contact Container-->
+    <script>
+        //Make the DIV element draggagle:
+        dragElement(document.getElementById("contactContainer"));
+
+        function dragElement(elmnt) {
+            var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+            if (document.getElementById(elmnt.id + "header")) {
+                /* if present, the header is where you move the DIV from:*/
+                document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+            } else {
+                /* otherwise, move the DIV from anywhere inside the DIV:*/
+                elmnt.onmousedown = dragMouseDown;
+            }
+
+            function dragMouseDown(e) {
+                e = e || window.event;
+                e.preventDefault();
+                // get the mouse cursor position at startup:
+                pos3 = e.clientX;
+                pos4 = e.clientY;
+                document.onmouseup = closeDragElement;
+                // call a function whenever the cursor moves:
+                document.onmousemove = elementDrag;
+            }
+
+            function elementDrag(e) {
+                e = e || window.event;
+                e.preventDefault();
+                // calculate the new cursor position:
+                pos1 = pos3 - e.clientX;
+                pos2 = pos4 - e.clientY;
+                pos3 = e.clientX;
+                pos4 = e.clientY;
+                // set the element's new position:
+                elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+                elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+            }
+
+            function closeDragElement() {
+                /* stop moving when mouse button is released:*/
+                document.onmouseup = null;
+                document.onmousemove = null;
+            }
+        }
+    </script>
+
+    <!--Jon Folder-->
+    <script>
+        //Make the DIV element draggagle:
+        dragElement(document.getElementById("jonFolder"));
+
+        function dragElement(elmnt) {
+            var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+            if (document.getElementById(elmnt.id + "header")) {
+                /* if present, the header is where you move the DIV from:*/
+                document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+            } else {
+                /* otherwise, move the DIV from anywhere inside the DIV:*/
+                elmnt.onmousedown = dragMouseDown;
+            }
+
+            function dragMouseDown(e) {
+                e = e || window.event;
+                e.preventDefault();
+                // get the mouse cursor position at startup:
+                pos3 = e.clientX;
+                pos4 = e.clientY;
+                document.onmouseup = closeDragElement;
+                // call a function whenever the cursor moves:
+                document.onmousemove = elementDrag;
+            }
+
+            function elementDrag(e) {
+                e = e || window.event;
+                e.preventDefault();
+                // calculate the new cursor position:
+                pos1 = pos3 - e.clientX;
+                pos2 = pos4 - e.clientY;
+                pos3 = e.clientX;
+                pos4 = e.clientY;
+                // set the element's new position:
+                elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+                elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+            }
+
+            function closeDragElement() {
+                /* stop moving when mouse button is released:*/
+                document.onmouseup = null;
+                document.onmousemove = null;
+            }
+        }
+    </script>
+</body>
+</html>

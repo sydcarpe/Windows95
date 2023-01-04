@@ -1,0 +1,576 @@
+:root {
+    --defaultGrey: #e2dcda;
+    --lgtGrey: #f4f1f1;
+    --darkGrey: #392d2d;
+    --darkBlue: #223F94;
+    --lightPink: #ffdeeb;
+    --darkPink: #deafc2;
+}
+
+@font-face {
+    font-family: 'Sysfont';
+    src: url('sysfont.woff2') format('woff2'), url('sysfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background: url(../images/pinkbackgroun.png) no-repeat;
+    background-size: cover;
+    font-family: 'Microsoft Sans Serif';
+    background-color: #007e7d;
+    overflow:hidden;
+}
+
+
+
+/*audio element*/
+.cdPlayer {
+    position: absolute;
+    z-index: 1;
+    width: 32.0em;
+    background-color: var(--defaultGrey);
+    box-shadow: 0 1px 3px var(--darkGrey);
+    border-right: 2px solid var(--darkGrey);
+    border-bottom: 2px solid var(--darkGrey);
+    height: 15.0em;
+    cursor: move;
+    top: 50%;
+    left: 60%;
+    
+}
+
+.totalcdBody{
+    border-left: 3px solid var(--lgtGrey);
+    height: 12.5em;
+    
+}
+
+/*header info*/
+.cdHeader {
+    display: flex;
+    flex-direction: row;
+    background-image: linear-gradient(to right, var(--lightPink) 60%, var(--darkPink) );
+    padding-left: 1.0em;
+    font-size: 15px;
+    height: 2.5em;
+    cursor: move;
+}
+
+    .cdHeader img{
+        align-self:center;
+        width: 40px;
+    }
+
+    .cdHeader h3{
+        display:inline;
+        width: 100%;
+    }
+
+    .cdPlayer h3{
+        top:0;
+        color: var(--darkGrey);
+        align-self:center;
+    }
+
+.headerButtons{
+    align-self:end;
+}
+
+.cdBody {
+    display: flex;
+    flex-direction: row;
+    padding: 1.0em;
+}
+    .cdBody img{
+        width: 9.0em;
+        background-color: var(--lgtGrey);
+        border: 1.5px solid var(--lgtGrey);
+        border-bottom: none;
+        cursor: default;
+    }
+
+.trackInfo{
+    display:flex;
+    flex-direction: column;
+    margin-left: 1.0em;
+    width: 100%;
+}
+
+.cdRowInfo{
+    display:flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.cdTitle {
+    font-size: 15px;
+    padding-top: .25em;
+    text-align:center;
+    padding-right: .25em;
+}
+
+.infoContainer{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    background-color: white;
+    border: 2px solid var(--darkGrey);
+    border-bottom: none;
+    width: 100%;
+    height: fit-content;
+    font-weight: bold;
+    margin-top: 1.0em;
+}
+
+.infoContainer button{
+    border-left: none;
+    border-top: none;
+}
+
+.infoContainer p{
+    margin-left: 1.0em;
+}
+
+
+h4{
+    margin:0;
+    padding:0;
+}
+
+.mediaButtons{
+    display:flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    margin-left: 8em;
+    margin-top: -3.5em;
+    font-size: 20px;
+}
+
+    .mediaButtons button {
+        border: 2px solid var(--darkGrey);
+        border-top: 2px solid var(--lgtGrey);
+        border-left: 2px solid var(--lgtGrey);
+        width: 5.0em;
+    }
+
+    .mediaButtons button:hover{
+        opacity: .75;
+    }
+
+
+/*Work Screen Display*/
+.workBody {
+    position: absolute;
+    z-index: 2;
+    background-color: var(--lgtGrey);
+    box-shadow: 0 1px 3px var(--darkGrey);
+    border-right: 2px solid var(--darkGrey);
+    border-bottom: 2px solid var(--darkGrey);
+    width: 45.0em;
+    height: 30.0em;
+    left: 6.0em;
+    top: -20.0em;
+}
+
+    .workBody img{
+        cursor: pointer;
+    }
+    .workBody h3 {
+        top: 0;
+        color: var(--darkGrey);
+        align-self: center;
+    }
+
+    .workBody button{
+        right: 80%;
+    }
+
+#workScreen {
+    position: absolute;
+    top: 25.0em;
+}
+
+#blogContainer {
+    position: absolute;
+}
+
+
+
+
+
+.subHeader {
+    display: flex;
+    flex-direction: row;
+    height: 2.75em;
+    background-color: var(--defaultGrey);
+    font-size: 14px;
+    padding: 0 .75em;
+    justify-content:space-evenly;
+   /* border-left: 3px solid var(--lgtGrey);*/
+}
+
+    .subHeader p{
+        margin:0;
+        margin-top: .75em;
+        margin-right: .5em;
+    }
+
+    .subHeader p:first-letter {
+        text-decoration:underline;
+        text-decoration-thickness: .1em;
+    }
+
+    .subHeader p:last-child::first-letter{
+        text-decoration:none;
+    }
+    
+.locationBar{
+    display:flex;
+    background-color:white;
+    border: 5px solid var(--defaultGrey);
+    width: 100%;
+    justify-self: start;
+    align-content:start;
+    height: 2.0em;
+    justify-content:flex-start;
+    
+    
+}
+
+    .locationBar p{
+        margin:0;
+        padding-left: .25em;
+        padding-top: .5em;
+        text-decoration:none;
+    }
+
+
+
+
+.microsoftButton {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    padding-right: .5em;
+}
+
+.fullScreenPic{
+        height: .25em;
+        width: .5em;
+        border-top: 2px solid var(--darkGrey);
+        border-right: 2px solid var(--darkGrey);
+        border-left: 2px solid var(--darkGrey);
+        border-bottom: 5px solid var(--darkGrey);
+        margin:0;
+    }
+
+.fullScreenPic:hover {
+    border-top: 2px solid var(--lgtGrey);
+    border-right: 2px solid var(--lgtGrey);
+    border-left: 2px solid var(--lgtGrey);
+    border-bottom: 5px solid var(--lgtGrey);
+}
+
+
+    .microsoftButton button{
+        margin-left: .25em;
+        align-self:center;
+        border-top: 2px solid var(--lgtGrey);
+        border-left: 2px solid var(--lgtGrey);
+        border-right: 2px solid var(--darkGrey);
+        border-bottom: 2px solid var(--darkGrey);
+        height: fit-content;
+        font-size: 20px;
+        height: 1.5em;
+        width: 1.5em;
+        background-color: var(--defaultGrey);
+        text-align:center;
+    }
+
+        .microsoftButton button:hover {
+            border-left: 2px solid var(--darkGrey);
+            border-top: 2px solid var(--darkGrey);
+            border-right: none;
+            border-bottom: none;
+            background-color: var(--darkBlue);
+            color: var(--lgtGrey);
+        }
+
+
+.workContainer {
+    padding: 3.0em;
+    height: 23.5em;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    width: 100%;
+    flex-wrap: wrap;
+    max-width: 28.5em;
+}
+
+
+.folder{
+    display: flex;
+    flex-direction: column;
+    max-width: 5.0em;
+    text-align:center;
+}
+
+    .folder img{
+        width: 50px;
+        align-content:center;
+        align-self: center;
+    }
+
+
+.workTotalbody{
+    display:flex;
+    flex-direction:row;
+}
+
+.workNavBar{
+    background-color: var(--lgtGrey);
+    border-right: 5px solid var(--defaultGrey);
+    border-left: 5px solid var(--defaultGrey);
+    height: 25.0em;
+    width: 20%;
+    display:flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+    .workNavBar h5{
+        margin:0;
+        padding: .25em;
+    }
+
+.minifolder{
+    display: flex;
+    flex-direction: row;
+    font-size: 15px;
+    justify-content:start;
+    padding:.25em;
+    padding-left: .5em;
+}
+
+    .minifolder p{
+        margin:0;
+        align-self: center;
+        margin-left: .25em;
+    }
+
+    .minifolder img{
+        height: 1.5em;
+    }
+
+.screenTitle{
+    text-align:center;
+    font-size: 20px;
+    align-self:center;
+    
+}
+
+
+/*Note pad css and design!*/
+#icelandNotePad {
+    position: absolute;
+    z-index: 10;
+    bottom: 5.0em;
+    left: 5.0em;
+    width: 40.0em;
+    height: 25.0em;
+}
+
+.notePadContainer{
+    background-color: white;
+    border: 2px solid var(--defaultGrey);
+    border-left: 3px solid var(--defaultGrey);
+    
+}
+
+.notePadContent{
+    border-left: 2px solid var(--darkGrey);
+    height: 20.5em;
+    padding-left: .25em;
+    overflow:scroll;
+}
+    .notePadContent h6 {
+        margin: 0;
+    }
+
+.notePadTitleBar{
+    background-color: var(--darkBlue);
+    display:flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap:nowrap;
+}
+
+.npLeftSideTitle{
+    display:flex;
+    flex-direction:row;
+    width: 100%;
+}
+
+.notePadTitleBar img {
+    width: 2.0em;
+    height: 2.0em;
+    margin: 0;
+}
+
+    .notePadTitleBar p{
+        margin:0;
+        text-align:center;
+        padding-top: .5em;
+        color: var(--lgtGrey);
+        font-size: 15px;
+        padding-left: .5em;
+    }
+ 
+
+    .notePadSubHeader {
+        display: flex;
+        flex-direction: row;
+        background-color: var(--defaultGrey);
+        font-size: 12px;
+        border-bottom: 2px solid var(--darkGrey);
+    }
+
+    .notePadSubHeader p{
+        margin:0;
+        padding:.5em;
+        align-self: center;
+    }
+
+    .notePadSubHeader p::first-letter{
+        text-decoration: underline;
+    }
+
+
+#covidFolder {
+    position: absolute;
+    z-index: 10;
+    bottom: 5.0em;
+    left: 5.0em;
+    width: 40.0em;
+    height: 25.0em;
+}
+
+#covidFolder h6{
+    margin:0;
+}
+
+.notePadContent button {
+    border: none;
+    text-decoration: underline;
+    background-color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+    .notePadContent button:hover {
+        color: var(--darkBlue);
+    }
+
+#travelifyFolder {
+    position: absolute;
+    z-index: 10;
+    bottom: 5.0em;
+    left: 5.0em;
+    width: 40.0em;
+    height: 25.0em;
+}
+
+
+    #travelifyFolder h6 {
+        margin: 0;
+    }
+
+    #travelifyFolder a{
+        padding-left:.25em;
+    }
+
+    #travelifyFolder a:visited{
+        color: black;
+    }
+
+    #travelifyFolder a:hover {
+        color: var(--darkBlue);
+    }
+
+#travelifyBlog {
+    position: absolute;
+    z-index: 10;
+    bottom: 5.0em;
+    left: 5.0em;
+    width: 40.0em;
+    height: 25.0em;
+}
+
+    #travelifyBlog a:visited {
+        color: black;
+    }
+
+    #travelifyBlog a:hover {
+        color: var(--darkBlue);
+    }
+
+#plannerNotePad {
+    position: absolute;
+    z-index: 10;
+    bottom: 5.0em;
+    left: 5.0em;
+    width: 40.0em;
+    height: 25.0em;
+}
+
+#plannerFolder {
+    position: absolute;
+    z-index: 10;
+    bottom: 5.0em;
+    left: 5.0em;
+    width: 40.0em;
+    height: 25.0em;
+}
+#contactContainer {
+    position: absolute;
+    z-index: 10;
+    left: 5.0em;
+    width: 40.0em;
+    height: 25.0em;
+    bottom: -10.0em;
+    margin: 0;
+}
+
+#innerFolder a{
+    text-decoration: none;
+    color: black;
+}
+
+#innerFolder a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+#innerFolder button {
+    border: none;
+    text-decoration: none;
+    background-color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+    #innerFolder button:hover {
+    }
+
+
+#jonFolder {
+    position: absolute;
+    z-index: 10;
+    left: 5.0em;
+    width: 40.0em;
+    height: 25.0em;
+    bottom: 10.0em;
+    margin: 0;
+}

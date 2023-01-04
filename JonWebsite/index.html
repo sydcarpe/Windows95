@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Jon!</title>
+    <link rel="stylesheet" href="css/homeCss.css" />
+    <link rel="stylesheet" href="css/headerCss.css" />
+
+    <!--Fonts-->
+    <link href="http://fonts.cdnfonts.com/css/jokerman" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&family=Roboto:wght@100;300&family=Shadows+Into+Light&family=Shadows+Into+Light+Two&family=Spartan:wght@500&display=swap" rel="stylesheet">
+
+    <script>
+        function goHome() {
+            location.href = "index.html";
+        }
+
+        function openNav() {
+            document.getElementById("mySidebar").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+        }
+    </script>
+</head>
+
+<body id="main">
+    <header>
+        <h1 onclick="goHome()">Jon</h1>
+        <button class="openbtn" onclick="openNav()">☰</button>
+    </header>
+
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a href="#">About</a>
+        <a href="music.html">Music</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+    </div>
+
+    <div class="pageContainer">
+
+        <div class="title ">
+            <div class="nameSpace nameBackground">
+                <h1>Jon Krus</h1>
+                <h5>DJ, singer/songwriter, father, has hot girlfriend, movie and tv show critic</h5>
+            </div>
+
+            <!--<h4>DJ, singer/songwriter, father, has hot girlfriend, movie and tv show critic </h4> -->
+
+            <div class="openImg">
+                <img src="images/drawJonPolaroid.png" />
+            </div>
+
+        </div>
+
+        <hr />
+
+        <h1>About </h1>
+        <div class="aboutJon">
+            
+
+            <h3>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit erat ac dictum tempus.
+                Maecenas egestas libero metus, eu malesuada nulla dictum pharetra.
+            </h3> 
+            <img src="images/woodPolaroidJon.png"/>
+            <h3>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit erat ac dictum tempus.
+                Maecenas egestas libero metus, eu malesuada nulla dictum pharetra.
+            </h3>
+        </div>
+        
+
+        <hr />
+
+        <h1 class="sectionHeader">DJ</h1>
+
+        <div class="djContainer">
+            <h3>how to hire</h3>
+            <img src="images/noteCard.png" />
+        </div>
+
+
+        <hr />
+
+        <h1>Weekly Top Picks/ newest review</h1>
+
+
+        <h1>FAQ</h1>
+    </div>
+
+</body>
+
+</html>

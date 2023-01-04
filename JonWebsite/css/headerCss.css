@@ -1,0 +1,79 @@
+:root {
+    --princePurple: #5f4b8b;
+    --darkPurple: #36151E;
+}
+
+body{
+    margin:0;
+}
+header {
+    font-family: 'Roboto', sans-serif;
+    padding: 4.0em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-transform: lowercase;
+    background: url(../images/crumpledwhitePaper.jpg) repeat;
+    background-size:cover
+}
+
+    header h1 {
+        cursor: pointer;
+    }
+
+/*Side bar information!*/
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    background: url(../images/crumpledwhitePaper.jpg) repeat;
+    background-size: cover;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+
+    box-shadow: 5px 5px 6px rgba(39,39,52,.50);
+}
+
+    .sidebar a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 30px;
+        color: black;
+        display: block;
+        transition: 0.3s;
+        font-family: 'Shadows Into Light', cursive;
+        text-transform: uppercase;
+    }
+
+        .sidebar a:hover {
+            color: var(--princePurple);
+        }
+
+    .sidebar .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+    }
+
+.openbtn {
+    font-size: 30px;
+    background: none;
+    cursor: pointer;
+    color: black;
+    border: none;
+}
+
+    .openbtn:hover {
+        color: #444;
+    }
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
